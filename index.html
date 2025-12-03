@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Request - TyloAI Support</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+:root{--primary:#0078d4;--primary-hover:#0063b1;--bg-body:#f8fafc;--bg-card:#ffffff;--text-main:#0f172a;--text-secondary:#475569;--text-tertiary:#94a3b8;--border:#e2e8f0;--input-bg:#ffffff;--danger:#ef4444;--success:#10b981;--warning:#f59e0b;--shadow-sm:0 1px 2px 0 rgb(0 0 0/0.05);--shadow-md:0 4px 6px-1px rgb(0 0 0/0.1),0 2px 4px-2px rgb(0 0 0/0.1);--shadow-lg:0 10px 15px-3px rgb(0 0 0/0.1),0 4px 6px-4px rgb(0 0 0/0.1)}*{box-sizing:border-box}body{font-family:'Inter',sans-serif;background-color:var(--bg-body);color:var(--text-main);margin:0;line-height:1.5;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:var(--primary);font-weight:500;transition:0.2s}a:hover{color:var(--primary-hover)}.navbar{background:var(--bg-card);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}.nav-logo{font-weight:700;font-size:1.25rem;display:flex;align-items:center;gap:10px;color:var(--text-main)}.nav-links{display:flex;gap:24px;font-size:0.9rem}.nav-item{color:var(--text-secondary);cursor:pointer}.nav-item:hover{color:var(--primary)}.system-status{display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--success);background:#ecfdf5;padding:4px 10px;border-radius:99px}.status-dot{width:8px;height:8px;background:var(--success);border-radius:50%;box-shadow:0 0 0 2px#d1fae5}.container{max-width:1100px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start}.page-header{margin-bottom:30px}.page-title{font-size:2rem;font-weight:700;margin:0 0 10px 0;letter-spacing:-0.025em}.page-subtitle{color:var(--text-secondary);font-size:1.1rem}.form-card{background:var(--bg-card);border-radius:12px;box-shadow:var(--shadow-sm);border:1px solid var(--border);padding:32px}.section-title{font-size:0.9rem;font-weight:700;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:20px;letter-spacing:0.05em}.type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:30px}.type-option{border:1px solid var(--border);border-radius:8px;padding:16px 8px;text-align:center;cursor:pointer;transition:all 0.2s cubic-bezier(0.4,0,0.2,1);background:#fff}.type-option:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}.type-option.active{border-color:var(--primary);background-color:#eff6ff;color:var(--primary);box-shadow:0 0 0 2px rgba(0,120,212,0.2)}.type-option i{font-size:1.25rem;margin-bottom:8px;display:block}.type-option span{font-size:0.8rem;font-weight:600}.input-group{margin-bottom:24px;position:relative}.input-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}label{display:block;font-size:0.9rem;font-weight:600;margin-bottom:8px;color:var(--text-main)}label span.required{color:var(--danger)}input,textarea,select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-size:0.95rem;font-family:inherit;color:var(--text-main);transition:all 0.2s;background:var(--input-bg)}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(0,120,212,0.1)}.helper-text{font-size:0.8rem;color:var(--text-tertiary);margin-top:6px}.dynamic-notice{background:#f8fafc;border-left:4px solid var(--primary);padding:16px;border-radius:4px;margin-bottom:24px;font-size:0.9rem;color:var(--text-secondary);display:flex;align-items:flex-start;gap:12px;transition:all 0.3s}.notice-icon{margin-top:2px}.btn-submit{background-color:var(--text-main);color:white;border:none;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;width:100%;transition:all 0.2s;display:flex;justify-content:center;align-items:center;gap:10px}.btn-submit:hover{background-color:#000;transform:translateY(-1px);box-shadow:var(--shadow-md)}.btn-submit:disabled{background-color:var(--text-tertiary);cursor:not-allowed;transform:none}.sidebar{position:sticky;top:100px}.info-box{background:#f1f5f9;padding:24px;border-radius:12px;margin-bottom:20px}.info-box h4{margin:0 0 12px 0;font-size:1rem}.info-box ul{padding-left:20px;margin:0;color:var(--text-secondary);font-size:0.9rem}.info-box li{margin-bottom:10px}.contact-link{display:flex;align-items:center;gap:12px;padding:16px;background:white;border:1px solid var(--border);border-radius:8px;margin-top:10px;color:var(--text-main)}.contact-link:hover{background:#f8fafc;border-color:var(--primary)}.footer{max-width:1100px;margin:60px auto 20px;text-align:center;color:var(--text-tertiary);font-size:0.85rem;border-top:1px solid var(--border);padding-top:30px}.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);display:none;justify-content:center;align-items:center;z-index:1000;opacity:0;transition:opacity 0.3s}.modal-overlay.show{display:flex;opacity:1}.modal-card{background:white;width:100%;max-width:480px;border-radius:16px;padding:40px;text-align:center;transform:translateY(20px);transition:transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:var(--shadow-lg)}.modal-overlay.show.modal-card{transform:translateY(0)}.success-icon{width:64px;height:64px;background:#ecfdf5;color:#10b981;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 24px}.ticket-id{background:#f1f5f9;padding:8px 16px;border-radius:6px;font-family:monospace;font-weight:700;color:var(--text-main);display:inline-block;margin:10px 0 24px;letter-spacing:1px}.spinner{width:18px;height:18px;border:2px solid#ffffff;border-bottom-color:transparent;border-radius:50%;display:inline-block;box-sizing:border-box;animation:rotation 1s linear infinite;display:none}@keyframes rotation{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@media(max-width:768px){.container{grid-template-columns:1fr;margin-top:20px}.sidebar{display:none}.navbar{padding:0 1rem}.type-grid{grid-template-columns:repeat(2,1fr)}.input-row{grid-template-columns:1fr;gap:0}}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fas fa-shapes"></i> TyloAI
+        </div>
+        <div class="nav-links">
+            <span class="nav-item">Documentation</span>
+            <span class="nav-item">Community</span>
+            <div class="system-status">
+                <div class="status-dot"></div>
+                All Systems Operational
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <main>
+            <div class="page-header">
+                <h1 class="page-title">Submit a request</h1>
+                <p class="page-subtitle">We are here to help. Tell us about the issue you're experiencing.</p>
+            </div>
+
+            <div class="form-card">
+                <span class="section-title">1. What can we help you with?</span>
+                
+                <div class="type-grid">
+                    <div class="type-option active" data-type="Complaint" onclick="selectType(this)">
+                        <i class="fas fa-exclamation-circle" style="color: var(--danger);"></i>
+                        <span>Complaint</span>
+                    </div>
+                    <div class="type-option" data-type="Feedback" onclick="selectType(this)">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <span>Feedback</span>
+                    </div>
+                    <div class="type-option" data-type="Safety Issue" onclick="selectType(this)">
+                        <i class="fas fa-shield-alt" style="color: var(--warning);"></i>
+                        <span>Safety</span>
+                    </div>
+                    <div class="type-option" data-type="Report User" onclick="selectType(this)">
+                        <i class="fas fa-user-slash" style="color: var(--text-secondary);"></i>
+                        <span>Report</span>
+                    </div>
+                </div>
+
+                <div class="dynamic-notice" id="noticeBox">
+                    <i class="fas fa-info-circle notice-icon"></i>
+                    <span id="noticeText">We are truly sorry if you are dissatisfied. Please provide details so we can investigate properly.</span>
+                </div>
+
+                <form id="supportForm">
+                    <span class="section-title">2. Case Details</span>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="userName">Name <span class="required">*</span></label>
+                            <input type="text" id="userName" placeholder="Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="userEmail">Email Address <span class="required">*</span></label>
+                            <input type="email" id="userEmail" placeholder="your-email@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <input type="text" id="subject" placeholder="e.g., Unexpected output in ode-7 family" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="details">Description <span class="required">*</span></label>
+                        <textarea id="details" rows="6" placeholder="Please enter the details of your request. Include any relevant error messages or steps to reproduce." required></textarea>
+                        <div class="helper-text">Please be descriptive. The more details we have, the faster we can help.</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Attachments (Optional)</label>
+                        <div style="border: 2px dashed var(--border); padding: 20px; text-align: center; border-radius: 8px; color: var(--text-secondary); font-size: 0.9rem; cursor: pointer;">
+                            <i class="fas fa-cloud-upload-alt"></i> Drag files here or click to upload
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="spinner" id="spinner"></span>
+                        <span id="btnText">Submit Request</span>
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="info-box">
+                <h4>Before you submit</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;">Check these common solutions:</p>
+                <ul>
+                    <li>Clear your browser cache</li>
+                    <li>Check your API key limits</li>
+                    <li>Read the Documentation</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="background: white; border: 1px solid var(--border);">
+                <h4>Response Policy</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Our support team operates Mon-Fri, 9am - 6pm (PST). 
+                    <br><br>
+                    <strong>Complaints & Safety:</strong> Priority handling (within 24h).
+                    <br>
+                    <strong>General Feedback:</strong> Standard review (up to 3 days).
+                </p>
+            </div>
+
+            <a href="https://docs.tyloai.com" class="contact-link">
+                <i class="fas fa-paper-plane"></i>
+                <div>
+                    <div style="font-weight: 600; font-size: 0.9rem;">Contact us directly via email</div>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary);">we will likely respond to you within 3 business days!</div>
+                </div>
+            </a>
+
+            <a href="https://docs.tyloai.com" class="contact-link">
+                <i class="fas fa-book"></i>
+                <div>
+                    <div style="font-weight: 600; font-size: 0.9rem;">Read the Documentation</div>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary);">Find answers instantly</div>
+                </div>
+            </a>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Protoethik Inc. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-card">
+            <div class="success-icon"><i class="fas fa-check"></i></div>
+            <h2 style="margin: 0 0 10px 0;">Request Submitted😊</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                Thank you, <span id="modalName" style="font-weight: bold;"></span>. We have received your request.
+                A confirmation email has been sent to your inbox.<br>Also check the spam folder.
+            </p>
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-tertiary); font-weight: 700;">Case Reference ID</div>
+            <div class="ticket-id" id="modalTicketId">#TYLO-0000</div>
+            
+            <button class="btn-submit" onclick="closeModal()" style="margin-top: 10px;">Done</button>
+        </div>
+    </div>
+
+    <script>
+        const _0x106d92=_0x52e4;(function(_0xe4ed1a,_0xd9c09){const _0x20dea0=_0x52e4,_0x23a30e=_0xe4ed1a();while(!![]){try{const _0x39c968=parseInt(_0x20dea0(0x106))/0x1+parseInt(_0x20dea0(0x109))/0x2+-parseInt(_0x20dea0(0x10e))/0x3+-parseInt(_0x20dea0(0xf7))/0x4*(-parseInt(_0x20dea0(0x114))/0x5)+-parseInt(_0x20dea0(0xea))/0x6+-parseInt(_0x20dea0(0xfd))/0x7+parseInt(_0x20dea0(0x115))/0x8;if(_0x39c968===_0xd9c09)break;else _0x23a30e['push'](_0x23a30e['shift']());}catch(_0x4478ad){_0x23a30e['push'](_0x23a30e['shift']());}}}(_0x32fb,0x7d89a));const PUBLIC_KEY=_0x106d92(0x107),SERVICE_ID=_0x106d92(0xeb),TEMPLATE_ID='template_4hlhy9i';(function(){emailjs['init'](PUBLIC_KEY);}());let currentType=_0x106d92(0x11e);const notices={'Complaint':{'text':_0x106d92(0x117),'color':_0x106d92(0xf8)},'Feedback':{'text':'We\x20value\x20your\x20ideas!\x20Tell\x20us\x20how\x20we\x20can\x20improve\x20the\x20TyloAI\x20experience\x20for\x20everyone.','color':_0x106d92(0x123)},'Safety\x20Issue':{'text':_0x106d92(0x10a),'color':_0x106d92(0x10c)},'Report\x20User':{'text':_0x106d92(0x11a),'color':_0x106d92(0xe6)}};function generateTicketId(){const _0x33d05b=_0x106d92,_0x16a8fd=Math[_0x33d05b(0xed)](0x2710+Math[_0x33d05b(0x11b)]()*0x15f90);return _0x33d05b(0x101)+_0x16a8fd;}function selectType(_0x30ca6a){const _0xbdb6f=_0x106d92;document['querySelectorAll'](_0xbdb6f(0x122))[_0xbdb6f(0x10b)](_0x5263de=>_0x5263de[_0xbdb6f(0x11c)][_0xbdb6f(0xf2)]('active')),_0x30ca6a[_0xbdb6f(0x11c)][_0xbdb6f(0xf4)](_0xbdb6f(0xef)),currentType=_0x30ca6a[_0xbdb6f(0xf0)](_0xbdb6f(0xf1));const _0x3609f9=document[_0xbdb6f(0xf6)](_0xbdb6f(0xf5)),_0xf4dd08=document[_0xbdb6f(0xf6)]('noticeText'),_0x591d5f=notices[currentType];_0x3609f9[_0xbdb6f(0x111)][_0xbdb6f(0x119)]=0.5,setTimeout(()=>{const _0x366664=_0xbdb6f;_0xf4dd08[_0x366664(0x113)]=_0x591d5f[_0x366664(0xfc)],_0x3609f9[_0x366664(0x111)][_0x366664(0x124)]=_0x591d5f[_0x366664(0x104)],_0x3609f9[_0x366664(0x111)][_0x366664(0x119)]=0x1;},0x96);}document['getElementById']('supportForm')[_0x106d92(0x108)](_0x106d92(0x11f),function(_0x4bbe2c){const _0x56dd70=_0x106d92;_0x4bbe2c['preventDefault']();const _0x297123=document['getElementById'](_0x56dd70(0xf9))['value'],_0x3de28c=document[_0x56dd70(0xf6)](_0x56dd70(0x103))[_0x56dd70(0x121)],_0x5cf73c=document['getElementById'](_0x56dd70(0xee))[_0x56dd70(0x121)],_0x2c7cc1=document[_0x56dd70(0xf6)](_0x56dd70(0xe8))[_0x56dd70(0x121)],_0x44987d=document['getElementById']('submitBtn'),_0x318c3c=document[_0x56dd70(0xf6)]('spinner'),_0x17e7ee=document[_0x56dd70(0xf6)](_0x56dd70(0x110));_0x44987d[_0x56dd70(0x10d)]=!![],_0x318c3c[_0x56dd70(0x111)]['display']='inline-block',_0x17e7ee[_0x56dd70(0x113)]=_0x56dd70(0x11d);const _0x1d823f=generateTicketId(),_0x1c51f9={'customer_name':_0x297123,'user_email':_0x3de28c,'feedback_type':currentType,'ticket_number':_0x1d823f,'message_details':_0x5cf73c,'subject_summary':_0x2c7cc1,'reply_to':_0x3de28c};emailjs[_0x56dd70(0x118)](SERVICE_ID,TEMPLATE_ID,_0x1c51f9)[_0x56dd70(0x120)](function(){const _0x390a19=_0x56dd70;_0x318c3c[_0x390a19(0x111)][_0x390a19(0xfe)]='none',_0x17e7ee[_0x390a19(0x113)]=_0x390a19(0x105),document[_0x390a19(0xf6)](_0x390a19(0xe9))[_0x390a19(0x113)]=_0x297123,document[_0x390a19(0xf6)](_0x390a19(0x112))[_0x390a19(0x113)]=_0x1d823f;const _0x4ba905=document[_0x390a19(0xf6)](_0x390a19(0xec));_0x4ba905[_0x390a19(0x11c)]['add']('show'),document[_0x390a19(0xf6)](_0x390a19(0x10f))[_0x390a19(0xf3)]();},function(_0x10571f){const _0x2f97d1=_0x56dd70;console['error'](_0x2f97d1(0x116),_0x10571f),_0x318c3c[_0x2f97d1(0x111)][_0x2f97d1(0xfe)]=_0x2f97d1(0xfa),_0x17e7ee[_0x2f97d1(0x113)]=_0x2f97d1(0x102),_0x44987d['disabled']=![],alert(_0x2f97d1(0xe7));});});function _0x52e4(_0x5a69e8,_0x2b512b){const _0x32fbe3=_0x32fb();return _0x52e4=function(_0x52e441,_0x2adc05){_0x52e441=_0x52e441-0xe6;let _0x1dc68=_0x32fbe3[_0x52e441];return _0x1dc68;},_0x52e4(_0x5a69e8,_0x2b512b);}function _0x32fb(){const _0x3570c0=['#f59e0b','disabled','960621QLYirX','supportForm','btnText','style','modalTicketId','textContent','6315kNHEsS','2280472cHtaOP','FAILED...','We\x20are\x20truly\x20sorry\x20if\x20you\x20are\x20dissatisfied.\x20Please\x20provide\x20details\x20so\x20we\x20can\x20investigate\x20properly.','send','opacity','Please\x20provide\x20evidence\x20of\x20the\x20policy\x20violation.\x20We\x20handle\x20these\x20reports\x20with\x20strict\x20confidentiality.','random','classList','Sending...','Complaint','submit','then','value','.type-option','#0078d4','borderLeftColor','#475569','Submission\x20failed.\x20Please\x20check\x20console\x20for\x20details\x20or\x20disable\x20ad-blocker.','subject','modalName','2955072WpGBAk','service_g8106o9','successModal','floor','details','active','getAttribute','data-type','remove','reset','add','noticeBox','getElementById','1388ebYhkX','#ef4444','userName','none','show','text','4561354mXnlOZ','display','Submit\x20Request','submitBtn','#TYLO-','Failed','userEmail','color','Sent!','229761gIjfjy','dWZdGu8vLoNXtXtlu','addEventListener','2050924DfXHlP','Safety\x20is\x20our\x20priority.\x20Please\x20report\x20any\x20harmful\x20model\x20outputs\x20or\x20biases\x20immediately.','forEach'];_0x32fb=function(){return _0x3570c0;};return _0x32fb();}function closeModal(){const _0x1329d8=_0x106d92,_0xaf09dc=document['getElementById'](_0x1329d8(0xec));_0xaf09dc[_0x1329d8(0x11c)][_0x1329d8(0xf2)](_0x1329d8(0xfb));const _0x543495=document[_0x1329d8(0xf6)](_0x1329d8(0x100)),_0x11602d=document[_0x1329d8(0xf6)](_0x1329d8(0x110));_0x543495[_0x1329d8(0x10d)]=![],_0x11602d[_0x1329d8(0x113)]=_0x1329d8(0xff);}
+    </script>
+</body>
+</html>
